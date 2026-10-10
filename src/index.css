@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-dark-950 text-dark-50 font-sans tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-white/20 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-600 rounded-full border-2 border-solid border-dark-950;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark-500;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-2xl border border-white/[0.08] rounded-2xl md:rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4)];
+  }
+
+  .glass-hover {
+    @apply glass transition-all duration-300;
+  }
+
+  .glass-hover:hover {
+    @apply bg-white/[0.06] border-white/[0.12] shadow-[0_12px_40px_rgba(0,0,0,0.5)];
+    transform: translateY(-2px);
+  }
+
+  .glass-panel {
+    @apply bg-dark-900/60 backdrop-blur-3xl border border-white/[0.08] rounded-[2rem];
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  .container-custom {
+    @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-10;
+  }
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.lightbox-content {
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
