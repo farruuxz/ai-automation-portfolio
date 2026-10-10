@@ -237,7 +237,7 @@ export default function Navbar() {
                     text-white
                   "
                 >
-                  NEXT
+                  NexdenAI
                 </span>
 
                 <span

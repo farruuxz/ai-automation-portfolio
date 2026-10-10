@@ -120,7 +120,7 @@ export const translations = {
       tg: 'Telegram:'
     },
     footer: {
-      brand: 'AI Automation Portfolio',
+      brand: 'NexdenAI',
       built: 'Built by'
     }
   },
@@ -245,7 +245,7 @@ export const translations = {
       tg: 'Telegram:'
     },
     footer: {
-      brand: 'AI Automation Portfolio',
+      brand: 'NexdenAI',
       built: 'Tomonidan yaratildi'
     }
   }
