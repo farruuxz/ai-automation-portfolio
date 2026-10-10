@@ -15,6 +15,7 @@ const fadeUp = {
 
 export default function Hero() {
   const { t } = useLanguage()
+  const consultationImage = `${import.meta.env.BASE_URL}images/consultation.png`
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
@@ -117,7 +118,7 @@ export default function Hero() {
             </div>
             <div className="bg-dark-800 p-1 sm:p-2">
               <img
-                src="/images/consultation.png"
+                src={consultationImage}
                 alt="AI-консультация в Telegram"
                 className="w-full h-auto rounded-[16px] sm:rounded-[24px] border border-white/[0.05]"
                 loading="eager"
