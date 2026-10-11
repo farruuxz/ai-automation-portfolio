@@ -114,12 +114,13 @@ export default function Navbar() {
         }}
         className="
           fixed
-          top-4
+          top-[max(0.75rem,env(safe-area-inset-top))]
           md:top-5
           left-0
           right-0
           z-[100]
-          px-3
+          px-2
+          min-[360px]:px-3
           md:px-6
           pointer-events-none
         "
@@ -132,7 +133,8 @@ export default function Navbar() {
             mx-auto
             w-full
             max-w-[900px]
-            rounded-[26px]
+            rounded-[22px]
+            sm:rounded-[26px]
             border
             overflow-visible
             transition-all
@@ -177,7 +179,8 @@ export default function Navbar() {
               min-h-[64px]
               items-center
               justify-between
-              px-5
+              px-3
+              min-[360px]:px-4
               md:px-6
             "
           >
@@ -196,8 +199,9 @@ export default function Navbar() {
                 group
                 flex
                 items-center
-                gap-2.5
+                gap-2
                 shrink-0
+                min-h-11
               "
             >
               <motion.div
@@ -283,6 +287,9 @@ export default function Navbar() {
                     }
                     className="
                       relative
+                      inline-flex
+                      min-h-11
+                      items-center
                       rounded-full
                       px-3.5
                       py-2
@@ -341,7 +348,8 @@ export default function Navbar() {
                   border
                   border-white/[0.09]
                   bg-white/[0.035]
-                  p-1
+                  p-0.5
+                  min-[360px]:p-1
                   backdrop-blur-xl
                 "
               >
@@ -354,8 +362,8 @@ export default function Navbar() {
                       onClick={() => setLang(code)}
                       className="
                         relative
-                        h-8
-                        min-w-[38px]
+                        h-11
+                        min-w-11
                         rounded-full
                         px-2
                         text-[10px]
@@ -415,7 +423,7 @@ export default function Navbar() {
                   group
                   hidden
                   lg:flex
-                  h-10
+                  h-11
                   items-center
                   gap-2
                   rounded-full
@@ -458,8 +466,8 @@ export default function Navbar() {
                 className="
                   relative
                   flex
-                  h-10
-                  w-10
+                  h-11
+                  w-11
                   items-center
                   justify-center
                   rounded-full
@@ -569,7 +577,8 @@ export default function Navbar() {
               >
                 <div
                   className="
-                    mx-3
+                    mx-2
+                    min-[360px]:mx-3
                     mb-3
                     border-t
                     border-white/[0.06]
@@ -614,6 +623,7 @@ export default function Navbar() {
                           rounded-[16px]
                           px-4
                           py-3.5
+                          min-h-12
                           text-[14px]
                           font-medium
                           text-white/65
@@ -657,6 +667,7 @@ export default function Navbar() {
                         bg-white
                         px-4
                         py-3.5
+                        min-h-12
                         text-[14px]
                         font-semibold
                         text-black

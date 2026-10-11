@@ -21,7 +21,7 @@ export default function Flow() {
         </motion.div>
 
         {/* Desktop horizontal flow */}
-        <div className="hidden md:flex items-center justify-between gap-3 relative max-w-5xl mx-auto">
+        <div className="hidden lg:flex items-center justify-between gap-3 relative max-w-5xl mx-auto">
           {steps.map((step, i) => (
             <motion.div
               key={step.label}
@@ -50,7 +50,7 @@ export default function Flow() {
         </div>
 
         {/* Mobile vertical flow */}
-        <div className="md:hidden flex flex-col gap-2 max-w-sm mx-auto">
+        <div className="lg:hidden flex flex-col gap-2 max-w-xl mx-auto">
           {steps.map((step, i) => (
             <motion.div
               key={step.label}

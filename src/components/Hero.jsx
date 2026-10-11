@@ -18,18 +18,18 @@ export default function Hero() {
   const consultationImage = `${import.meta.env.BASE_URL}images/consultation.png`
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-28 min-[360px]:pt-32 pb-16 sm:pb-20 overflow-hidden">
       {/* Subtle radial highlight instead of colored orbs */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-white/[0.02] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container-custom relative z-10 w-full">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-12 sm:mb-16">
           <motion.div
             custom={0}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] mb-8 backdrop-blur-md"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] mb-6 sm:mb-8 backdrop-blur-md"
           >
             <span className="text-[11px] font-semibold text-dark-200 tracking-wider uppercase">
               {t.hero.badge}
@@ -41,7 +41,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tighter mb-6 text-white"
+            className="text-[40px] min-[360px]:text-[44px] min-[430px]:text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-[-0.04em] mb-6 text-white"
           >
             {t.hero.title1}
             <br />
@@ -53,7 +53,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-lg sm:text-xl text-dark-300 leading-relaxed max-w-2xl mb-10 font-medium"
+            className="text-[16px] min-[360px]:text-[17px] sm:text-xl text-dark-300 leading-relaxed max-w-2xl mb-8 sm:mb-10 font-medium"
           >
             {t.hero.text}
           </motion.p>
@@ -63,11 +63,11 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-12"
+            className="flex w-full flex-col sm:w-auto sm:flex-row items-center gap-3 sm:gap-4 mb-10 sm:mb-12"
           >
             <a
               href="#demo"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] transition-all duration-300 hover:scale-[1.02] hover:bg-dark-50 shadow-[0_4px_14px_0_rgba(255,255,255,0.2)]"
+              className="inline-flex min-h-14 w-full max-w-[280px] sm:w-auto items-center justify-center px-6 sm:px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] transition-all duration-300 hover:scale-[1.02] hover:bg-dark-50 shadow-[0_4px_14px_0_rgba(255,255,255,0.2)]"
             >
               {t.hero.btnPrimary}
             </a>
@@ -75,7 +75,7 @@ export default function Hero() {
               href={CONFIG.telegramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/[0.04] border border-white/[0.1] text-white hover:bg-white/[0.08] font-medium text-[15px] transition-all duration-300 backdrop-blur-md"
+              className="inline-flex min-h-14 w-full max-w-[280px] sm:w-auto items-center justify-center px-6 sm:px-8 py-4 rounded-full bg-white/[0.04] border border-white/[0.1] text-white hover:bg-white/[0.08] font-medium text-[15px] transition-all duration-300 backdrop-blur-md"
             >
               {t.hero.btnSecondary}
             </a>
@@ -86,7 +86,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="flex flex-wrap justify-center gap-3"
+            className="flex flex-wrap justify-center gap-2 sm:gap-3"
           >
             {techBadges.map((badge) => (
               <span
@@ -106,9 +106,9 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative max-w-5xl mx-auto"
         >
-          <div className="relative rounded-[24px] sm:rounded-[32px] overflow-hidden bg-dark-900 border border-white/[0.1] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] ring-1 ring-white/5">
+          <div className="relative rounded-[20px] sm:rounded-[32px] overflow-hidden bg-dark-900 border border-white/[0.1] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] ring-1 ring-white/5">
             {/* macOS window chrome */}
-            <div className="flex items-center justify-center relative h-12 bg-[#1c1c1e] border-b border-white/[0.05]">
+            <div className="flex items-center justify-center relative h-10 sm:h-12 bg-[#1c1c1e] border-b border-white/[0.05]">
               <div className="absolute left-4 sm:left-5 flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
                 <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />

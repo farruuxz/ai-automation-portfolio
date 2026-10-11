@@ -37,7 +37,7 @@ export default function BusinessValue() {
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {t.value.cards.map((v) => (
-            <motion.div key={v.title} variants={item} className="glass p-8 hover:bg-white/[0.06] transition-colors">
+            <motion.div key={v.title} variants={item} className="glass p-6 sm:p-8 hover:bg-white/[0.06] transition-colors">
               <h3 className="text-lg font-semibold text-white mb-2 tracking-tight">{v.title}</h3>
               <p className="text-[15px] text-dark-300 leading-relaxed">{v.text}</p>
             </motion.div>

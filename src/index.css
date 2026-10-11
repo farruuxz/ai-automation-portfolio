@@ -7,10 +7,12 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
   }
 
   body {
-    @apply bg-dark-950 text-dark-50 font-sans tracking-tight;
+    @apply bg-dark-950 text-dark-50 font-sans tracking-tight overflow-x-hidden;
   }
 
   ::selection {
@@ -53,11 +55,25 @@
   }
 
   .section-padding {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-20 sm:py-24 md:py-32 lg:py-40;
   }
 
   .container-custom {
-    @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-10;
+    @apply max-w-6xl mx-auto px-4 min-[360px]:px-5 sm:px-8 lg:px-10;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

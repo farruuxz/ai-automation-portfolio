@@ -35,14 +35,14 @@ export default function Screenshots() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center mb-20 md:mb-32"
+          className="text-center mb-16 sm:mb-20 md:mb-32"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
             {t.demo.title}
           </h2>
         </motion.div>
 
-        <div className="space-y-24 md:space-y-40">
+        <div className="space-y-20 sm:space-y-24 md:space-y-40">
           {showcases.map((item, i) => (
             <motion.div
               key={item.id}
@@ -50,18 +50,27 @@ export default function Screenshots() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className={`grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center ${
+              className={`grid lg:grid-cols-[1fr_1.3fr] gap-8 sm:gap-12 lg:gap-20 items-center ${
                 i % 2 === 1 ? 'lg:grid-cols-[1.3fr_1fr]' : ''
               }`}
             >
               <div className={`flex flex-col ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">{item.title}</h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight">{item.title}</h3>
                 <p className="text-[17px] text-dark-300 leading-relaxed font-medium">{item.caption}</p>
               </div>
 
               <div
                 className={`relative cursor-zoom-in group ${i % 2 === 1 ? 'lg:order-1' : ''}`}
                 onClick={() => setLightbox({ open: true, src: item.image, alt: item.alt })}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault()
+                    setLightbox({ open: true, src: item.image, alt: item.alt })
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={item.alt}
               >
                 <div className="relative rounded-[20px] overflow-hidden bg-dark-800 border border-white/[0.08] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)] transition-all duration-500 group-hover:border-white/[0.15]">
                   <div className="flex items-center justify-center relative h-10 bg-[#1c1c1e] border-b border-white/[0.04]">

@@ -40,7 +40,7 @@ export default function Problem() {
           className="grid md:grid-cols-3 gap-6"
         >
           {t.problem.cards.map((card, idx) => (
-            <motion.div key={card.title} variants={item} className="glass-panel p-8 md:p-10 transition-colors hover:bg-dark-800/80">
+            <motion.div key={card.title} variants={item} className="glass-panel p-6 sm:p-8 md:p-10 transition-colors hover:bg-dark-800/80">
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/[0.08] text-white mb-6">
                 {idx === 0 && (
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

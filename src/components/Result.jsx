@@ -17,7 +17,7 @@ export default function Result() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-8">
             {t.result.title}
           </h2>
-          <div className="glass-panel p-8 md:p-12 mb-10 text-left md:text-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)]">
+          <div className="glass-panel p-6 sm:p-8 md:p-12 mb-10 text-left md:text-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)]">
             <p className="text-lg md:text-xl text-white leading-relaxed font-medium mb-4">
               {t.result.p1}
             </p>
